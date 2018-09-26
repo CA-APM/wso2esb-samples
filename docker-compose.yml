@@ -1,0 +1,10 @@
+version: '2'
+services:
+
+  esb:
+    image: wso2esb-sample1
+    ports:
+      - 9000:9000
+      - 9449:9443
+    build: .
+
