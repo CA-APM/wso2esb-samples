@@ -1,6 +1,11 @@
 FROM isim/wso2esb
 
+ENV CA_AGENT=true \
+    MANAGER_URL=apm-docker.ca.com:5009
+
 COPY startup.sh run_client.sh ./
+
+ADD IntroscopeAgentFiles-NoInstaller10.7.0.90tomcat.unix.tar .
 
 # install ant and curl, build SimpleStockQuoteService
 RUN apt-get update && \
