@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # let servers start
 sleep 10

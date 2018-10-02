@@ -9,3 +9,4 @@ services:
     build: .
     environment:
       - MANAGER_URL=130.119.4.119:5009
+      - AGENT_HOSTNAME=apm-docker

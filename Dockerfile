@@ -3,7 +3,7 @@ FROM wso2esb:4.5.0
 ENV CA_AGENT=true \
     MANAGER_URL=apm-docker:5009
 
-COPY startup.sh run_client.sh ./
+COPY startup.sh run_client.sh wso2esb.tar.gz ./
 
 ADD IntroscopeAgentFiles-NoInstaller10.7.0.90tomcat.unix.tar .
 
