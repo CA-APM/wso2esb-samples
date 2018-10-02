@@ -1,0 +1,14 @@
+FROM openjdk:8-jdk-alpine
+
+WORKDIR /opt/
+
+COPY wso2esb-4.5.0.zip /opt/
+
+RUN unzip wso2esb-4.5.0.zip
+
+EXPOSE 9443 9763 8243 8280
+
+WORKDIR /opt/wso2esb-4.5.0
+
+CMD ["bin/wso2server.sh"]
+

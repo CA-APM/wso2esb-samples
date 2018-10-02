@@ -12,7 +12,11 @@ PWD=$(pwd)
 if [ ${CA_AGENT} = true ] && [ -d "${PWD}/wily" ]; then
 
   ### Start of APM agent setup ####
-  export JAVA_OPTS="${JAVA_OPTS} -javaagent:${PWD}/wily/Agent.jar -Dcom.wily.introscope.agentProfile=${PWD}/wily/coer/config/IntroscopeAgent.profile -Dcom.wily.introscope.agent.agentName=WSO2ESB -Dintroscope.agent.customProcessName=WSO2ESB -Dintroscope.agent.platform.monitor.system=Alpine"
+  export JAVA_OPTS="${JAVA_OPTS} -javaagent:${PWD}/wily/Agent.jar -Dcom.wily.introscope.agentProfile=${PWD}/wily/core/config/IntroscopeAgent.profile -Dcom.wily.introscope.agent.agentName=WSO2ESB -Dintroscope.agent.customProcessName=WSO2ESB -Dintroscope.agent.platform.monitor.system=Alpine"
+
+  if [ ! -z "${AGENT_HOSTNAME}" ]; then
+    export JAVA_OPTS="${JAVA_OPTS} -Dcom.wily.introscope.agent.hostName=${AGENT_HOSTNAME}"
+  fi
 
   ### update agent profile
 	if [ ! -z "${MANAGER_URL}" ]; then
