@@ -24,6 +24,8 @@ n/a
 Download the following files:
 * WSO2ESB binary (e.g. `wso2esb-4.5.0.zip`)
 * CA APM Java Agent binary (e.g. [`IntroscopeAgentFiles-NoInstaller10.7.0.90tomcat.unix.tar`](https://support.ca.com))
+* The wso2esb java agent extension (e.g. `wso2esb.tar.gz`)
+and put them all in the project directory.
 
 Install [Docker](https://docs.docker.com/install/) and [docker-compose](https://docs.docker.com/compose/install/).
 
