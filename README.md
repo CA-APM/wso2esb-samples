@@ -35,7 +35,8 @@ CA APM 10.7 and WSO2ESB 4.5.0.
 2. Build the samples image: `docker-compose build`
 
 ## Configuration
-Change the `command` in `docker-compose.yml` to select the sample number you want to run.
+* Set the environment variables `MANAGER_URL` and `AGENT_HOSTNAME` in `docker-compose.yml` to configure those CA APM agent properties.
+* Change the `command` in `docker-compose.yml` to select the sample number you want to run.
 
 # Usage Instructions
 Start a new container with `docker-compose up -d`. This will execute the configured sample once.
